@@ -1,0 +1,11 @@
+.homeWrapper{
+
+    color: blue;
+
+}
+.RecipeCardWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 9px;
+    margin: 10px 0;
+  }
