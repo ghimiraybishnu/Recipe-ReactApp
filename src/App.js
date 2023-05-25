@@ -1,20 +1,21 @@
-
 import './App.css';
-import {Routes,Route} from "react-router-dom"
+import {Route,Routes} from "react-router-dom"
 import Home from './pages/Home/Home';
-import Recipe from './pages/Home/Recipe';
+import Recipe from './components/recipeList/Recipe';
+import RecipeDetail from './components/recipeList/RecipeDetail';
+import searchField from './common/SearchField';
 
 function App() {
   return (
+    <>
     <div>
-      <Routes >
-        <Route element={<Home />} path='/'/>
-        <Route element={<Recipe />} path='recipe'/>
-        
+      <Routes>
+        <Route element={<Home/>} path={'/'}/>
+        <Route element={<Recipe />} path={'/recipe'} />
+        <Route element={<RecipeDetail />} path= {'/recipe/:id'} />
       </Routes>
-
-
     </div>
+    </>
   );
 }
 
